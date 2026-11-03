@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Demande n° {{ demande.id }} — {{ demande.titre }}</h2>
+<p>Statut : <strong>{{ demande.statut }}</strong></p>
+<div>{{ demande.description }}</div>
+{% if demande.statut != 'cloturee' %}
+<form method="post" action="/demandes/{{ demande.id }}/cloturer"><button>Clôturer la demande</button></form>
+{% endif %}
+<p><a href="/">← Retour</a></p>
+{% endblock %}

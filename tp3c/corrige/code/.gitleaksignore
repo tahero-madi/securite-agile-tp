@@ -1,0 +1,4 @@
+# Secrets presents dans l'historique Git, REVOQUES le JJ/MM/AAAA (ticket SEC-__).
+# Format : <commit>:<fichier>:<regle>:<ligne> (copier le champ "Fingerprint" du rapport Gitleaks).
+# Exemple :
+# 4f4c95d0000000000000000000000000000000000:config.py:gitlab-pat:8
