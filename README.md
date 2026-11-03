@@ -48,7 +48,8 @@ En fin de formation : [QCM final](qcm-final.md). En cas de problème : [En cas d
 
 ## Les équipes et les rôles
 
-Deux équipes de trois, chacune avec son projet GitLab. Les rôles sont annoncés le premier matin.
+Deux équipes de trois, chacune avec son projet GitLab. **C'est chaque équipe qui choisit ses rôles**, au début
+du TP1-A, et elle peut en changer au jour 2. Profitez-en pour essayer un rôle que vous n'exercez pas d'habitude.
 
 | Rôle | Ce qu'il fait pendant les TP |
 | --- | --- |

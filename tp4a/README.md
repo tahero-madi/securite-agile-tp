@@ -46,7 +46,7 @@ request, elle retire le point devant `.dast-zap`. Le job lance l'application dan
 scanne en **mode passif** (*baseline*) : ZAP observe les réponses, il n'attaque rien.
 
 Les **auditeurs** ouvrent ensuite le rapport `zap.html` dans les artefacts du job. Si le job ne fonctionne
-pas, le formateur lance le scan depuis le serveur de TP et vous transmet le rapport.
+pas, le formateur lance le scan sur une copie du projet audité et vous transmet le rapport.
 
 > Un scan ne vise jamais une cible qui n'est pas explicitement autorisée : ici, uniquement l'application de
 > la formation.

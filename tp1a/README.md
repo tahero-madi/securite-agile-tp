@@ -6,13 +6,23 @@ avec dès le départ une place pour la sécurité. Support : sections 1.2 à 1.4
 Tout se fait dans le navigateur, dans le projet GitLab de votre équipe. Si ce n'est pas déjà fait, suivez
 l'étape 1 de [Avant de commencer](../avant-de-commencer.md).
 
-## Étape 1 — Sécuriser votre compte
+## Étape 1 — Choisir vos rôles (5 min)
 
-**Pourquoi.** Un compte de développeur compromis, c'est un dépôt compromis : la première mesure de sécurité
-de votre chaîne, c'est votre propre connexion.
+**Pourquoi.** Une équipe agile a besoin que quelqu'un porte la valeur, quelqu'un le cadre et quelqu'un la
+sécurité. Ce sont les rôles du projet fil rouge, pas vos postes réels : choisissez-les librement.
 
-Chacun : activez la double authentification (recommandé), en suivant
-[Avant de commencer](../avant-de-commencer.md#1-votre-compte-gitlab).
+| Rôle | Ce qu'il fait pendant les TP |
+| --- | --- |
+| Product Owner | Ordonne le backlog, tranche les priorités, signe les risques acceptés |
+| Scrum Master | Anime le Sprint Planning, le Daily et les restitutions, garde le temps, fait respecter les règles |
+| Champion sécurité | Relaie les bonnes pratiques, anime la modélisation des menaces, aide au tri des alertes |
+
+Tout le monde reste développeur : chacun code, teste et relit au jour 2. Vous pourrez changer de rôle au
+jour 2.
+
+**Et pour votre compte :** activez la double authentification si ce n'est pas fait (recommandé), en suivant
+[Avant de commencer](../avant-de-commencer.md#1-votre-compte-gitlab). Un compte de développeur compromis,
+c'est un dépôt compromis.
 
 ## Étape 2 — Les labels
 
@@ -76,7 +86,7 @@ Validez avec un message de commit explicite, par exemple « Rôles et règles de
 ## Point de contrôle
 
 - Le tableau affiche les trois colonnes et les labels existent.
-- Les rôles, dont le champion sécurité, et les règles sont écrits dans le README.
+- Les rôles choisis par l'équipe et ses règles sont écrits dans le README.
 
 **À débattre en équipe :** en quoi le label `donnees::sensibles` aide-t-il le Product Owner à prioriser ?
 
