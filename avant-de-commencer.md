@@ -24,25 +24,47 @@ poussé).
 | Celui de votre équipe | Maintainer : vous administrez le projet |
 | Celui de l'autre équipe | Reporter : lecture seule, pour l'audit du TP4-A |
 
+Pour les TP du jour 1, le navigateur de votre poste suffit : tout se passe dans GitLab.
+
 ## 2. Votre VM
 
-Le formateur vous indique le nom de votre VM (`lab-apprenant-01` à `lab-apprenant-06`), son adresse et
-vos identifiants de connexion. Connectez-vous depuis votre poste :
+Le formateur vous envoie un **lien personnel** vers votre environnement Hexceos. Ouvrez-le dans le
+navigateur de votre poste : ni compte ni mot de passe à saisir.
+
+1. Double-cliquez sur votre machine pour ouvrir sa console. Préférez le mode **Bureau distant** : la
+   résolution s'adapte à votre écran. Le bouton **Plein écran** vous donne toute la place.
+2. Si un mot de passe vous est demandé, il est sous l'icône **clé** (identifiants de la machine).
+3. Le presse-papiers fonctionne dans les deux sens : bouton **Coller** de la barre d'outils.
+
+**Prenez un instantané** (icône appareil photo) avant chaque TP qui modifie la machine : en cas d'erreur,
+vous revenez à cet état en quelques secondes.
+
+**À partir du TP3-A, travaillez dans la VM** : ouvrez GitLab dans le Firefox de la VM, codez dans VS Code
+sur la VM, lancez l'application sur la VM.
+
+## 3. Installer les outils (5 minutes, une seule fois)
+
+Dans la VM, ouvrez un **Terminal** et lancez :
 
 ```bash
-ssh stagiaire@ADRESSE-DE-VOTRE-VM
+sudo apt-get update
+sudo apt-get install -y git python3-venv
+sudo snap install code --classic
 ```
 
-Avec VS Code : extension **Remote - SSH**, puis **Connect to Host** avec la même adresse. Vous éditez alors
-les fichiers de la VM comme s'ils étaient sur votre poste.
+- `git` et `python3-venv` ne sont pas installés par défaut sur Ubuntu Desktop.
+- `code` est VS Code. Il apparaît ensuite dans le menu des applications, ou se lance par `code .` dans un
+  dossier.
 
-## 3. Votre jeton d'accès personnel
+## 4. Votre jeton d'accès personnel
 
 **Pourquoi.** Pour cloner et pousser en HTTPS, Git a besoin d'un secret. Un jeton d'accès vaut mieux que
 votre mot de passe : il est limité à certaines actions, il expire, et il se révoque sans toucher à votre
 compte. Si vous avez activé la double authentification, il est même obligatoire.
 
-Dans GitLab : avatar, **Modifier le profil**, **Jetons d'accès** (Access tokens), **Ajouter un jeton** :
+**Créez-le dans le Firefox de la VM**, pas sur votre poste : le secret ne quitte ainsi jamais la machine
+qui s'en sert. Dans GitLab : avatar, **Modifier le profil**, **Jetons d'accès** (Access tokens),
+**Ajouter un jeton** :
 
 - **Nom :** `vm-formation` ;
 - **Date d'expiration :** le lendemain de la formation ;
@@ -50,18 +72,20 @@ Dans GitLab : avatar, **Modifier le profil**, **Jetons d'accès** (Access tokens
 
 Copiez le jeton affiché : GitLab ne le montrera plus. Ne le collez nulle part ailleurs que dans Git.
 
-## 4. Configurer Git et cloner le projet
+## 5. Configurer Git et cloner le projet
 
-Sur votre VM (remplacez `equipe-a` par le projet de votre équipe) :
+Dans le terminal de la VM (remplacez `equipe-a` par le projet de votre équipe) :
 
 ```bash
 git config --global user.name "Prénom Nom"
 git config --global user.email "prenom.nom@exemple.fr"
 git config --global credential.helper "cache --timeout=28800"
 
+cd ~
 git clone https://gitlab-3033.mooo.com/formation-3033/equipe-a.git
 # Username : votre identifiant GitLab ; Password : votre jeton
 cd equipe-a
+code .                              # ouvre le projet dans VS Code
 ```
 
 **Ligne par ligne.**
@@ -72,7 +96,9 @@ cd equipe-a
   qui finit dans une sauvegarde ou une capture d'écran.
 - `git clone` : récupère le projet **avec tout son historique**. Retenez-le pour le TP3-B.
 
-## 5. Lancer les tests et l'application
+## 6. Lancer les tests et l'application
+
+Dans le terminal de la VM, depuis le dossier du projet :
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
@@ -82,21 +108,17 @@ flask --app app init-db
 flask --app app run                 # écoute sur 127.0.0.1:5000
 ```
 
-L'application n'écoute que sur la VM elle-même. Pour l'ouvrir dans le navigateur de votre poste, créez un
-tunnel SSH depuis **votre poste**, dans un second terminal :
+Ouvrez **http://127.0.0.1:5000 dans le Firefox de la VM**. Comptes de démonstration : `alice` / `alice2026`
+et `bob` / `bob2026` (agents), `gestion` / `gestion2026` (gestionnaire). `Ctrl+C` dans le terminal arrête
+l'application.
 
-```bash
-ssh -L 5000:127.0.0.1:5000 stagiaire@ADRESSE-DE-VOTRE-VM
-```
-
-Puis ouvrez http://localhost:5000. Comptes de démonstration : `alice` / `alice2026` et `bob` / `bob2026`
-(agents), `gestion` / `gestion2026` (gestionnaire).
+L'application n'écoute que sur la VM elle-même : personne d'autre ne peut l'atteindre, et c'est voulu.
 
 ## Trois règles
 
 1. **Tout est fictif** : comptes, demandes, RIB, jetons. N'utilisez jamais de vraies données, même pour un
    test rapide.
-2. **L'application est vulnérable** : laissez-la écouter sur `127.0.0.1`, ne l'exposez pas sur Internet.
+2. **L'application est vulnérable** : laissez-la écouter sur `127.0.0.1`, ne l'exposez pas sur le réseau.
 3. **Les scans ne visent que l'application de la formation**, jamais un autre site ou serveur.
 
 ---

@@ -3,8 +3,9 @@
 **Jour 2, 09:55 · 30 min · par équipe.** Objectif : poser les protections qui rendent le pipeline
 incontournable, puis le voir tourner. Support : sections 3.1 à 3.3 et 3.6.
 
-**Avant tout (10 min, chacun) :** si ce n'est pas fait, préparez votre VM, votre jeton d'accès et clonez le
-projet : étapes 2 à 5 de [Avant de commencer](../avant-de-commencer.md).
+**Avant tout (10 min, chacun) :** ouvrez votre VM, installez les outils, créez votre jeton d'accès et clonez
+le projet : étapes 2 à 6 de [Avant de commencer](../avant-de-commencer.md). Prenez ensuite un instantané de
+la VM.
 
 ## Étape 1 — Lire le pipeline
 

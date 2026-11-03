@@ -61,6 +61,7 @@ Répartissez-vous le travail en trois lots :
 Après chaque correction :
 
 ```bash
+pip install -q bandit==1.9.4               # une seule fois : le scanner du pipeline, en local
 python -m pytest                                  # tous les tests
 bandit -r . -x ./tests,./.venv --severity-level medium --confidence-level medium
 git add -A && git commit -m "SEC-0x : <ce qui est corrigé>" && git push

@@ -10,7 +10,8 @@ security user stories, pipeline DevSecOps, audit et comité de mise en productio
   bouton de copie en haut à droite.
 - **Travaillez dans GitLab** : https://gitlab-3033.mooo.com, groupe `formation-3033`, projet de votre
   équipe (`equipe-a` ou `equipe-b`). Le backlog, le tableau, le code et le pipeline y sont.
-- **Codez sur votre VM** (à partir du TP3-A), en SSH ou avec VS Code Remote-SSH.
+- **Codez sur votre VM** (à partir du TP3-A) : vous l'ouvrez dans le navigateur par votre lien Hexceos,
+  puis vous travaillez sur son bureau, avec Firefox, VS Code et un terminal.
 - Commencez par [Avant de commencer](avant-de-commencer.md) : votre compte GitLab, votre VM et le jeton
   d'accès pour Git.
 
