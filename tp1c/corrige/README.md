@@ -19,16 +19,6 @@ Il est court, il porte de la valeur, et il intègre l'exigence de sécurité au 
 **Critère à refuser :** « l'application est sécurisée ». Personne ne peut le vérifier, donc personne ne
 peut dire qu'il n'est pas rempli.
 
-## Les cartes incident : réponses attendues
-
-| Carte | Décision attendue | Pourquoi |
-| --- | --- | --- |
-| « Un jeton d'API a été collé dans un ticket public » | Couloir d'urgence : **révoquer le jeton d'abord**, puis nettoyer le ticket et chercher d'autres fuites | Le jeton est compromis dès qu'il est visible ; le supprimer du ticket ne suffit pas |
-| « Le RSSI signale une vulnérabilité critique sur Werkzeug » | Évaluer en minutes : sommes-nous exposés, est-elle exploitée (catalogue KEV, EPSS) ? Si oui, couloir d'urgence ; sinon, ticket priorisé dans le sprint | On décide sur l'exploitation réelle et l'exposition, pas sur le seul score CVSS (module 4) |
-
-Dans les deux cas, le Product Owner est informé : si l'urgence consomme la capacité, l'objectif de sprint
-se renégocie avec lui, il ne se dégrade pas en silence.
-
 ---
 
 [Énoncé](../README.md) · [Sommaire](../../README.md)
