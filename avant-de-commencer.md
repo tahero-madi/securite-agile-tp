@@ -28,8 +28,19 @@ Pour les TP du jour 1, le navigateur de votre poste suffit : tout se passe dans 
 
 ## 2. Votre VM
 
-Le formateur vous envoie un **lien personnel** vers votre environnement Hexceos. Ouvrez-le dans le
-navigateur de votre poste : ni compte ni mot de passe à saisir.
+Chaque participant a un **lien personnel** vers son environnement Hexceos. Ouvrez le vôtre (tableau
+ci-dessous) dans le navigateur de votre poste : ni compte ni mot de passe à saisir.
+
+| Participant | Nom | Équipe | Lien d'accès personnel |
+| --- | --- | --- | --- |
+| 01 | Thibault | A | https://hra-ng.hexceos.cloud/p/37e8ccd3-5f2c-473b-8b24-a8a8f2ba9bb9ckwxzckp |
+| 02 | Rabeb | A | https://hra-ng.hexceos.cloud/p/37e8ccd3-5f2c-473b-8b24-a8a8f2ba9bb9p2zaeumc |
+| 03 | Ilyes | A | https://hra-ng.hexceos.cloud/p/37e8ccd3-5f2c-473b-8b24-a8a8f2ba9bb94pwrwec4 |
+| 04 | Stéphane | B | https://hra-ng.hexceos.cloud/p/37e8ccd3-5f2c-473b-8b24-a8a8f2ba9bb94yzby5w3 |
+| 05 | Léo | B | https://hra-ng.hexceos.cloud/p/37e8ccd3-5f2c-473b-8b24-a8a8f2ba9bb9tmefkwm5 |
+| 06 | Vincent | B | https://hra-ng.hexceos.cloud/p/37e8ccd3-5f2c-473b-8b24-a8a8f2ba9bb99vvz4qks |
+
+> Ces environnements sont créés pour la durée de la formation puis supprimés. N'y mettez aucune donnée réelle.
 
 1. Double-cliquez sur votre machine pour ouvrir sa console. Préférez le mode **Bureau distant** : la
    résolution s'adapte à votre écran. Le bouton **Plein écran** vous donne toute la place.
