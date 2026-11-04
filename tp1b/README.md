@@ -13,8 +13,8 @@ de les traiter, sans exposer les données d'un agent à un autre.*
 quand il est satisfait. Une bonne story est INVEST : indépendante, négociable, porteuse de valeur, estimable,
 petite (*small*), testable.
 
-Rédigez **6 à 8 stories**, chacune dans un ticket : **Planifier > Tickets > Nouveau ticket** (Plan > Issues
-> New issue).
+Rédigez **6 à 8 stories**, chacune dans un ticket : **Planifier > Éléments de travail** (Plan > **Work items**,
+anciennement *Tickets / Issues*), bouton **Nouveau** puis type **Issue**.
 
 - **Titre :** « En tant que …, je veux …, afin de … ».
 - **Description :** au moins un critère d'acceptation.
@@ -29,7 +29,8 @@ gestionnaire (consulter toutes les demandes, les clôturer).
 **Pourquoi.** Un abuse case retourne une story du point de vue de l'attaquant. Il produit un **critère
 négatif** : ce que le système doit refuser. Sans lui, personne ne teste ce qui ne doit pas marcher.
 
-Ajoutez **au moins 2 abuse cases**, label `type::abuse-case` :
+Ajoutez **au moins 2 abuse cases**, labels `type::abuse-case` **et `etat::a-faire`** (un abuse case est un
+ticket qui vit sur le tableau, comme une story), plus `risque::eleve` ou `risque::moyen` selon la gravité :
 
 ```text
 En tant qu'agent malveillant, je veux <action interdite>, afin de <gain pour l'attaquant>.
@@ -56,7 +57,8 @@ Le Product Owner classe chaque ticket en *Must*, *Should*, *Could* ou *Won't*, p
 ## Point de contrôle
 
 - Le backlog contient 6 à 8 stories estimées et ordonnées.
-- Au moins 2 abuse cases, chacun avec un critère négatif.
+- Au moins 2 abuse cases, chacun avec un critère négatif, **présents sur le tableau** (`etat::a-faire`) et
+  estimés comme les stories.
 
 ---
 

@@ -60,7 +60,10 @@ rien terminé.
 Menu **Planifier > Jalons** (Plan > Milestones), **Nouveau jalon** : titre `Sprint 1`, date de début
 aujourd'hui, date de fin dans deux semaines (durée fictive).
 
-## Étape 5 — Les règles de l'équipe dans le README
+## Étape 5 — Les règles de l'équipe dans le README (par une merge request)
+
+Vous allez écrire ces règles **via une merge request**, pour pratiquer dès maintenant le geste que vous
+répéterez sur le code au jour 2 : on ne pousse pas directement sur `main`, on propose et on fait relire.
 
 Ouvrez `README.md` à la racine du projet, cliquez sur **Modifier > Modifier un fichier** (Edit > Edit single
 file) et ajoutez à la fin :
@@ -81,12 +84,22 @@ file) et ajoutez à la fin :
 - Aucun secret ni donnée réelle dans le code, les tickets ou les captures d'écran.
 ```
 
-Validez avec un message de commit explicite, par exemple « Rôles et règles de l'équipe ».
+Puis validez **par une merge request**, pas directement sur `main` :
+
+1. En bas de l'écran d'édition, choisissez **Valider dans une nouvelle branche** (Commit to a new branch),
+   nommez-la `setup-equipe` et laissez cochée l'option **Démarrer une merge request** (Start a new merge
+   request) ; message de commit « Rôles et règles de l'équipe », puis **Valider**.
+2. GitLab ouvre la merge request ; un pipeline peut se lancer, laissez-le finir.
+3. **Faites-la relire** par un coéquipier — une autre personne que l'auteur, comme l'exige la règle que vous
+   venez d'écrire. Il examine l'onglet **Modifications** (Changes) puis **approuve** ou commente.
+4. **Fusionnez** la merge request (bouton **Fusionner** / Merge) ; la branche `setup-equipe` peut être
+   supprimée à la fusion.
 
 ## Point de contrôle
 
 - Le tableau affiche les trois colonnes et les labels existent.
 - Les rôles choisis par l'équipe et ses règles sont écrits dans le README.
+- La mise à jour du README est passée par une **merge request relue puis fusionnée** (branche `setup-equipe`).
 
 **À débattre en équipe :** en quoi le label `donnees::sensibles` aide-t-il le Product Owner à prioriser ?
 

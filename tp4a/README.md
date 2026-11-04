@@ -30,7 +30,7 @@ fichier. Où chercher :
 | Preuve | Où dans GitLab |
 | --- | --- |
 | Rôles, DoR, DoD | `README.md` du projet |
-| Backlog, labels | **Planifier > Tableaux**, **Planifier > Tickets** |
+| Backlog, labels | **Planifier > Tableaux des tickets**, **Planifier > Éléments de travail** (Work items) |
 | Modèle de menaces | `docs/` |
 | Relecture des merge requests | **Code > Merge requests**, onglet **Fusionnées** (Merged) |
 | Pipeline, seuils | `.gitlab-ci.yml`, **Compilation > Pipelines** |

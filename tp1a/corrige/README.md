@@ -8,6 +8,7 @@
 | Tableau | Open · `etat::a-faire` · `etat::en-cours` · `etat::en-revue` · Closed |
 | Jalon | `Sprint 1`, deux semaines |
 | README | Section « Équipe » (PO, Scrum Master, champion sécurité) et « Règles de fonctionnement » |
+| Merge request | Branche `setup-equipe`, MR relue par un coéquipier puis fusionnée dans `main` |
 
 Déplacer un ticket d'une colonne à l'autre change son label `etat::` : le tableau et les labels restent
 cohérents sans effort.
@@ -27,8 +28,9 @@ sensibles » avant une revue ou un audit.
 - **Des rôles flous.** Le champion sécurité n'est pas « celui qui fait la sécurité » : c'est un relais.
   La sécurité reste l'affaire de toute l'équipe.
 - **La règle de relecture oubliée.** L'édition gratuite de GitLab n'impose pas d'approbation des merge
-  requests : la règle « relue par une autre personne » n'existe que si l'équipe l'écrit et s'y tient. Elle
-  reviendra dans la Definition of Done au TP1-C et dans l'audit au TP4-A.
+  requests : la règle « relue par une autre personne » n'existe que si l'équipe l'écrit et s'y tient — vous
+  venez de la pratiquer à l'étape 5. Elle reviendra dans la Definition of Done au TP1-C et dans l'audit au
+  TP4-A.
 
 ---
 
