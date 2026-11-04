@@ -1,6 +1,6 @@
 # TP1-C — Sprint planning, Definition of Ready et Definition of Done
 
-**Jour 1, 11:10 · 50 min · animé par le Scrum Master.** Objectif : planifier un premier sprint et écrire les
+**Jour 1, 11:10 · 40 min · animé par le Scrum Master.** Objectif : planifier un premier sprint et écrire les
 deux définitions qui font entrer la sécurité dans le cycle. Support : sections 1.2, 1.4 et 1.6.
 
 ## Étape 1 — Sprint Planning (15 min)
@@ -35,22 +35,10 @@ Une story est terminée si :
 **Règle d'or :** chaque critère doit être **vérifiable** par quelqu'un d'extérieur à l'équipe, avec une
 preuve (un test, un rapport, une merge request).
 
-## Étape 3 — Daily Scrum avec une carte incident (10 min)
+## Étape 3 — Restitution : présenter sa DoD (10 min)
 
-**Pourquoi.** Un sprint ne se déroule jamais comme prévu. Ce qui compte, c'est la façon dont l'équipe
-décide face à un imprévu de sécurité.
-
-Debout, 15 secondes par personne : hier, aujourd'hui, ce qui bloque. Puis le formateur tire une carte
-incident. L'équipe décide et justifie :
-
-- renégocier l'objectif de sprint avec le Product Owner ;
-- traiter en **couloir d'urgence** Kanban ;
-- ou mettre au backlog, avec une priorité.
-
-## Étape 4 — Restitution croisée (10 min)
-
-Chaque équipe présente sa DoD en 3 minutes. L'autre équipe cherche **un critère non vérifiable** et propose
-de le reformuler.
+Chaque équipe présente sa Definition of Done en 3 minutes : quels critères de sécurité elle y a inscrits, et
+comment chacun se vérifie — le test, le rapport ou la merge request qui le prouve.
 
 ## Point de contrôle
 
