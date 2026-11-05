@@ -4,6 +4,9 @@ Formation 3-033, deux jours. Douze travaux pratiques en équipe, sur une applica
 vulnérable, « Demandes internes ». Vous la faites évoluer comme une vraie équipe agile : backlog, menaces,
 security user stories, pipeline DevSecOps, audit et comité de mise en production.
 
+Le **[support de cours](support-de-cours.pdf)** (PDF) reprend tous les apports théoriques des quatre modules,
+avec des exemples tirés de l'application : gardez-le comme référence pour vos projets.
+
 ## Comment travailler
 
 - **Lisez l'énoncé ici**, sur GitHub, dans le navigateur de votre poste. Chaque bloc de commandes a un
