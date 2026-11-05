@@ -120,8 +120,11 @@ flask --app app run                 # écoute sur 127.0.0.1:5000
 ```
 
 Ouvrez **http://127.0.0.1:5000 dans le Firefox de la VM**. Comptes de démonstration : `alice` / `alice2026`
-et `bob` / `bob2026` (agents), `gestion` / `gestion2026` (gestionnaire). `Ctrl+C` dans le terminal arrête
-l'application.
+et `bob` / `bob2026` (agents), `gestion` / `gestion2026` (gestionnaire).
+
+**Arrêter, réinitialiser, relancer.** `Ctrl+C` arrête l'application. Pour repartir de **données propres**
+(après un test ou une attaque), relancez `flask --app app init-db`, puis `flask --app app run`. Si le terminal
+est nouveau, réactivez d'abord l'environnement : `. .venv/bin/activate`.
 
 L'application n'écoute que sur la VM elle-même : personne d'autre ne peut l'atteindre, et c'est voulu.
 
